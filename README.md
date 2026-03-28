@@ -14,9 +14,6 @@ Personal portfolio website built with Astro. It includes a homepage hero, a work
 - Scroll-reveal animations (IntersectionObserver)
 - Subtle cursor “glow” effect on non-touch devices
 - Astro view transitions for smoother navigation
-- Contact buttons:
-  - Email button opens **Gmail compose** (instead of `mailto:`)
-  - Phone button uses `tel:`
 
 ## Tech Stack
 
@@ -42,34 +39,3 @@ src/layouts/           Base layout wrapper
 src/styles/            Global + animation styles
 src/scripts/           Small client-side helpers
 ```
-
-## Development
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run locally:
-
-```bash
-npm run dev
-```
-
-Build production output:
-
-```bash
-npm run build
-```
-
-Preview the production build:
-
-```bash
-npm run preview
-```
-
-## Customization
-
-- Update contact info (email/phone) in `src/components/Hero.astro` and `src/pages/about.astro`.
-- Update global styling in `src/styles/global.css`.
