@@ -1,0 +1,88 @@
+---
+import { projects } from '../data/projects.js';
+
+const ProjectCard = ({ project }) => {
+  return (
+    <div class="project-card">
+      <img src={project.image} alt={project.title} class="project-image" />
+      <h3 class="project-title">{project.title}</h3>
+      <p class="project-description">{project.description}</p>
+      <a href={project.link} class="project-link">View Project</a>
+    </div>
+  );
+};
+
+---
+
+<section class="projects-section">
+  <h2 class="section-title">My Projects</h2>
+  <div class="projects-grid">
+    {projects.map(project => (
+      <ProjectCard project={project} />
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects-section {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .project-description {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .project-link {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .project-link:hover {
+    background-color: #005bb5;
+  }
+</style>

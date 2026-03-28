@@ -1,0 +1,58 @@
+---
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+    <nav>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/work">Work</a></li>
+        <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+  }
+
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #f39c12;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>

@@ -1,0 +1,17 @@
+---
+const { children } = Astro.props;
+
+const animatedTextStyle = {
+  animation: 'fadeIn 1s ease-in-out',
+  fontSize: '2rem',
+  fontWeight: 'bold',
+  color: '#ff6347', // A bold color for the text
+  textAlign: 'center',
+  margin: '20px 0',
+};
+
+---
+
+<div style={animatedTextStyle}>
+  {children}
+</div>

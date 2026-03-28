@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const phone = "+38761917671";
+const email = "haruntorlak787@gmail.com";
+const githubUrl = "https://github.com/haruntorlak1";
+const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+---
+
+<BaseLayout title="About — Harun Torlak" description="Education, skills, and contact details.">
+  <section class="section">
+    <div class="container">
+      <h1 class="reveal" style="margin:0 0 .6rem; font-size: clamp(2rem, 1.2rem + 2.4vw, 3rem); letter-spacing:-.03em;">
+        About
+      </h1>
+
+      <div class="grid cols-3" style="margin-top:1rem;">
+        <article class="card reveal" data-delay="1">
+          <h3 style="margin:0 0 .4rem;">Languages</h3>
+          <ul class="list" style="margin:0;">
+            <li>English</li>
+            <li>Bosnian</li>
+          </ul>
+        </article>
+
+        <article class="card reveal" data-delay="2">
+          <h3 style="margin:0 0 .4rem;">Education</h3>
+          <ul class="list" style="margin:0;">
+            <li>International Burch University — BSc Information Technology</li>
+            <li>Treća gimnazija, Sarajevo — IT specialization diploma</li>
+          </ul>
+        </article>
+
+        <article class="card reveal" data-delay="3">
+          <h3 style="margin:0 0 .4rem;">Skills</h3>
+          <div class="split">
+            <div>
+              <div class="label">Languages</div>
+              <div class="value">C#, C++, Python, JavaScript, HTML, CSS, PHP, TypeScript</div>
+            </div>
+            <div>
+              <div class="label">Frameworks/Tools</div>
+              <div class="value">.NET Core, React, React Native, Firebase, WordPress</div>
+            </div>
+            <div>
+              <div class="label">Databases</div>
+              <div class="value">SQL Server, MySQL, Firestore</div>
+            </div>
+            <div>
+              <div class="label">Other</div>
+              <div class="value">Git, GitHub, Figma</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h2 id="contact" class="reveal" style="margin-top:3rem;">Contact</h2>
+      <article class="card reveal" data-delay="1" style="margin-top:1rem;">
+        <div class="btn-row" style="justify-content:center; margin-top:0;">
+          <a class="btn primary" href={gmailComposeUrl}>{email}</a>
+          <a class="btn" href={`tel:${phone}`}>{phone}</a>
+          <a class="btn" href={githubUrl} target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .split{ display:grid; gap:.8rem; }
+  .label{ color: rgba(238,240,255,.62); font-size:.9rem; }
+  .value{ color: rgba(238,240,255,.86); line-height:1.55; }
+</style>

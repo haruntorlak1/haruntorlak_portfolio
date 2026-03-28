@@ -1,0 +1,89 @@
+---
+const phone = "+38761917671";
+const email = "haruntorlak787@gmail.com";
+const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+---
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-left">
+      <span class="kicker reveal">
+        <span class="dot" aria-hidden="true"></span>
+        Software Engineer
+      </span>
+
+      <h1 class="hero-title reveal" data-delay="1">
+        Harun <span class="grad">Torlak</span><span class="blink">.</span>
+      </h1>
+
+      <p class="hero-sub reveal" data-delay="2">
+        Software Engineer from Sarajevo — focused on clean UI and production delivery.
+      </p>
+
+      <div class="btn-row reveal" data-delay="3">
+        <a class="btn primary" href="/work">Projects</a>
+        <a class="btn" href="/about">About</a>
+        <a class="btn" href={gmailComposeUrl}>{email}</a>
+        <a class="btn" href={`tel:${phone}`}>{phone}</a>
+      </div>
+    </div>
+
+    <div class="hero-right reveal" data-delay="2">
+      <div class="card hero-card">
+        <h3 style="margin:0 0 .5rem;">Highlights</h3>
+        <ul class="list" style="margin:0;">
+          <li><strong>Kamen Hreša</strong> — Vite + React (deploy, SEO, SMTP contact)</li>
+          <li><strong>Event Manager</strong> — ASP.NET Core MVC + SQL Server (Calendar API, roles)</li>
+          <li><strong>AtoB</strong> — mobile app concept (Firebase Auth + Firestore)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .hero{ padding: 2.2rem 0 1.2rem; }
+    .hero-inner{
+      display:grid;
+      grid-template-columns: 1.25fr .9fr;
+      gap: 1.2rem;
+      align-items: stretch;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 980px){ .hero-inner{ grid-template-columns: 1fr; } }
+
+    .hero-title{
+      margin:.8rem 0 .6rem;
+      font-size: clamp(2.3rem, 1.5rem + 3.2vw, 4.2rem);
+      line-height: 1.03;
+      letter-spacing: -0.05em;
+    }
+    .hero-sub{
+      margin:0;
+      color: rgba(238,240,255,.78);
+      max-width: 70ch;
+      font-size: 1.06rem;
+      line-height: 1.65;
+    }
+
+    .grad{
+      background: linear-gradient(135deg, var(--accent), var(--accent2), var(--accent3));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      background-size: 160% 160%;
+      animation: gradshift 7s ease-in-out infinite;
+    }
+    @keyframes gradshift{
+      0%{ background-position: 0% 50%; }
+      50%{ background-position: 100% 50%; }
+      100%{ background-position: 0% 50%; }
+    }
+    .blink{
+      display:inline-block;
+      color: rgba(238,240,255,.6);
+      animation: blink 1.25s steps(1,end) infinite;
+    }
+    @keyframes blink{ 50%{ opacity:.15; } }
+  </style>
+</section>

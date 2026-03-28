@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /astro.config.mjs
+Disallow: /package.json
+Disallow: /tsconfig.json
+Disallow: /README.md

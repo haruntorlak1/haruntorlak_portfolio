@@ -1,0 +1,26 @@
+const animations = () => {
+    const elements = document.querySelectorAll('.animate-on-scroll');
+
+    const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const animateOnScroll = (entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(animateOnScroll, options);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+};
+
+document.addEventListener('DOMContentLoaded', animations);

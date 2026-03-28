@@ -1,0 +1,25 @@
+{
+  "name": "my-astro-portfolio",
+  "version": "1.0.0",
+  "description": "A bold and creative portfolio built with Astro, featuring animations and a modern design.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [
+    "portfolio",
+    "astro",
+    "animations",
+    "web development"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "astro": "^2.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.0"
+  }
+}
